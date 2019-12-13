@@ -1,5 +1,5 @@
 import {
-    FETCH_SMURF,
+    FETCH_SMURFS,
     FETCH_SMURFS_SUCCESS,
     FETCH_SMURFS_FAIL,
     ADD_SMURF,
@@ -15,7 +15,7 @@ import {
   
    function reducer(state = initialState, action) {
      switch(action.type) {
-       case FETCH_SMURF: 
+       case FETCH_SMURFS: 
          return {
           ...state,
           isLoading: true

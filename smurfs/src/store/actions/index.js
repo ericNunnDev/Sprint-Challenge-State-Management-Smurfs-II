@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-export const FETCH_SMURF = 'FETCH_SMURF';
+export const FETCH_SMURFS = 'FETCH_SMURF';
 export const FETCH_SMURFS_SUCCESS = 'FETCH_SMURFS_SUCCESS';
 export const FETCH_SMURFS_FAIL = 'FETCH_SMURFS_FAIL';
 export const ADD_SMURF = 'ADD_SMURF';
 export const ADD_FAIL = 'ADD_FAIL';
 
 export const getSmurfs = () => dispatch => {
-  dispatch({ type: FETCH_SMURF });
+  dispatch({ type: FETCH_SMURFS });
   axios
    .get(
     'http://localhost:3333/smurfs'
