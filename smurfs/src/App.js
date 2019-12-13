@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getSmurfs } from './store/actions';
-import SmurfList from './components/SmurfList';
 import SmurfForm from './components/SmurfForm';
 import "./App.css";
 
@@ -12,9 +11,17 @@ class App extends Component {
 
   render() {
     return ( 
-      <div className='container'>
+      <div className='container center-align'>
         <h1>Smurfs</h1>
-        <SmurfList smurfs={this.state.smurfs} />
+        {this.props.smurfs.map(smurf => {
+               return (
+                 <div>
+                  <h5>{smurf.name}</h5>
+                  <p>Height: {smurf.height}</p>
+                  <p>Age: {smurf.age}</p>
+                 </div>  
+               ) 
+           })} 
         <SmurfForm />
       </div>
      );
