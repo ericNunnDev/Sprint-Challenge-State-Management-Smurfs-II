@@ -4,7 +4,7 @@ import {
     FETCH_SMURFS_FAIL,
     ADD_SMURF,
     ADD_FAIL
-  } from '../actions';
+  } from '../actions/index';
   
   const initialState = {
      smurfs: [],

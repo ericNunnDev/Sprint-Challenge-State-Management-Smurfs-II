@@ -5,9 +5,17 @@ import SmurfForm from './components/SmurfForm';
 import "./App.css";
 
 class App extends Component {
-  state = {
-    smurfs: []
+  constructor() {
+    super();
+    this.state = {
+      smurfs: [{}]
+    };
   }
+
+addSmurf = e => {
+  e.preventDefault();
+
+}
 
   render() {
     return ( 
